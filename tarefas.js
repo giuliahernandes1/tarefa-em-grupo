@@ -37,3 +37,13 @@ console.log("Total: "+total+" | Feitas: "+feitas);
 }
 // Teste final
 resumo();
+function concluirTarefa(indice) {
+if (indice < 1 || indice > tarefas.length) {
+console.log("Indice invalido."); return;
+}
+tarefas[indice - 1].concluida = true;
+console.log("Concluida: " + tarefas[indice-1].descricao);
+}
+// Teste
+adicionarTarefa("Tarefa C");
+concluirTarefa(1); listarTarefas();
